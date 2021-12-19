@@ -1,0 +1,204 @@
+/* Resets the box size of every element */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    min-height: 100%;
+    line-height: 1;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 200%;
+  }
+  
+  input, select, option, optgroup, textarea, button,
+  pre, code {
+    font-size: 100%;
+    font-family: inherit;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+
+:root{
+    --lightcolor: lightskyblue;
+    --lightcolor2: white;
+    --darkcolor: black;
+    --herobackground: url(https://images.unsplash.com/photo-1636819488524-1f019c4e1c44?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80);
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--darkcolor);
+    margin:0 auto;
+    width: 100%;
+    height:80px;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+header h1 {
+    color:var(--darkcolor);
+    background-color: var(--lightcolor);
+    text-align: center;
+    padding: 10px 10px 10px 60px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+nav ul a {
+    margin: 20px;
+    color: var(--lightcolor);
+    border-bottom: var(--lightcolor) 3px solid;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+nav a:hover{
+    color: var(--lightcolor2);
+    border-bottom: var(--lightcolor2) 3px solid;
+}
+.hero{
+    position:relative;
+    text-align: center;
+    color: var(--lightcolor);
+    
+}
+.hero img{
+    
+    width: 100%;
+}
+
+.herotitle {
+    width: 500px;
+    position: absolute;
+    right: 200px;
+    bottom: 200px;
+    padding: 20px 0;
+    background-color: var(--darkcolor);
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 100px 100px 100px;
+    align-items: center;
+}
+
+main section{
+margin-bottom: 50px;
+}
+
+main h2{
+    text-align: right;
+    margin-right:50px;
+}
+
+main p{
+    border-left: solid var(--darkcolor) 3px;
+    width: 800px;
+    padding-left: 50px;
+ 
+}
+#aboutme{
+    display: flex;
+    flex-direction: row;  
+}
+
+
+#work{
+    display: flex;
+    flex-direction: row;
+}
+
+.cardcontainer{
+    display: flex;
+    width: 800px;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-left: solid var(--darkcolor) 3px;
+    padding-left: 50px;
+}
+.card{
+    position:relative;
+    margin: 10px 0px;
+    width: calc(50% - 10px);
+    text-align: left;
+    color: var(--lightcolor);
+    background-color: var(--lightcolor);
+    opacity: 90%;
+}
+
+.card:nth-child(1) {
+    width: 100%;
+}
+
+.card img{
+    border: var(--lightcolor) solid 5px;
+}
+
+.card:hover {
+    opacity: 100%;
+}
+.cardtitle {
+    
+    position: absolute;
+    bottom: 20px;
+    left:20px;
+    background-color: var(--darkcolor);
+    padding: 20px;
+    border: var(--lightcolor) solid 5px;
+
+}
+
+#contactme{
+    display: flex;
+    flex-direction: row;
+}
+
+.contactlinks {
+    display: flex;
+    width: 800px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-left: solid var(--darkcolor) 3px;
+    padding-left: 50px;
+}
+
+.contactlinks li {
+    border-bottom: solid var(--darkcolor) 3px;
+    padding-bottom: 3px;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: var(--darkcolor);
+    color: var(--lightcolor);
+    text-align: center;
+}
+
+footer h6 {
+    padding:25px;
+}
