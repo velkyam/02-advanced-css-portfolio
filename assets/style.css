@@ -30,12 +30,13 @@
     list-style: none;
   }
 
+  /* Used variables for easy color change across the site */
+  /* I tried to made hero image a variable as well but I wasn't sure what was the best way to add alt text. I tried to put the alt text in the the div but wasn't sure if that was a good practice so I stuck to putting the image in HTML instead. Would appreciate a comment on this in feedback.*/
+
 :root{
     --lightcolor: lightskyblue;
     --lightcolor2: white;
     --darkcolor: black;
-    --herobackground: url(https://images.unsplash.com/photo-1636819488524-1f019c4e1c44?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80);
-
 }
 
 header {
@@ -48,7 +49,6 @@ header {
     width: 100%;
     height:80px;
     font-family: 'Courier New', Courier, monospace;
-    
 }
 
 header h1 {
@@ -61,7 +61,6 @@ header h1 {
 nav ul {
     display: flex;
     flex-direction: row;
-    
 }
 
 nav ul a {
@@ -79,10 +78,8 @@ nav a:hover{
     position:relative;
     text-align: center;
     color: var(--lightcolor);
-    
 }
 .hero img{
-    
     width: 100%;
 }
 
@@ -100,7 +97,7 @@ main {
     display: flex;
     flex-direction: column;
     margin: 50px 100px 100px 100px;
-    align-items: center;
+    
 }
 
 main section{
@@ -108,46 +105,49 @@ margin-bottom: 50px;
 }
 
 main h2{
+    display: flex;
     text-align: right;
     margin-right:50px;
 }
 
 main p{
     border-left: solid var(--darkcolor) 3px;
-    width: 800px;
+    min-width: 500px;
     padding-left: 50px;
- 
+
 }
-#aboutme{
-    display: flex;
-    flex-direction: row;  
+main p a{
+    color: var(--darkcolor);
+}
+main p a:visited{
+    color: var(--darkcolor);
 }
 
-
-#work{
-    display: flex;
-    flex-direction: row;
+#aboutme, #work, #contactme {
+    display:flex;
 }
+
 
 .cardcontainer{
     display: flex;
-    width: 800px;
+    min-width: 500px;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     border-left: solid var(--darkcolor) 3px;
     padding-left: 50px;
 }
+/* opacity to give it a subtle tint */
+/* width 50% - margin */
 .card{
     position:relative;
     margin: 10px 0px;
     width: calc(50% - 10px);
     text-align: left;
-    color: var(--lightcolor);
-    background-color: var(--lightcolor);
-    opacity: 90%;
+    color: var(--darkcolor);
+    opacity:85%;
 }
-
+/* first card to take all of the space */
 .card:nth-child(1) {
     width: 100%;
 }
@@ -155,39 +155,54 @@ main p{
 .card img{
     border: var(--lightcolor) solid 5px;
 }
-
+/* highlight card if hovered over */
 .card:hover {
     opacity: 100%;
 }
-.cardtitle {
-    
+
+.cardtitle {  
     position: absolute;
     bottom: 20px;
-    left:20px;
-    background-color: var(--darkcolor);
+    background-color: var(--lightcolor);
     padding: 20px;
     border: var(--lightcolor) solid 5px;
-
-}
-
-#contactme{
-    display: flex;
-    flex-direction: row;
 }
 
 .contactlinks {
     display: flex;
-    width: 800px;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     border-left: solid var(--darkcolor) 3px;
     padding-left: 50px;
+    color: var(--darkcolor);
 }
 
-.contactlinks li {
+.contactlinks li{
     border-bottom: solid var(--darkcolor) 3px;
+    padding-bottom: 3px;
+}
+
+.contactlinks a{
+    border-bottom: solid var(--darkcolor) 3px;
+    padding-bottom: 3px;
+    text-decoration: none;
+    color: var(--darkcolor);
+}
+.contactlinks a:visited{
+    text-decoration: none;
+    color: var(--darkcolor);
+}
+.contactlinks li:hover {
+    border-bottom: solid var(--lightcolor) 3px;
+    color: var(--lightcolor);
+    padding-bottom: 3px;
+}
+.contactlinks a:hover {
+    border-bottom: solid var(--lightcolor) 3px;
+    color: var(--lightcolor);
     padding-bottom: 3px;
 }
 
@@ -198,7 +213,74 @@ footer {
     color: var(--lightcolor);
     text-align: center;
 }
-
 footer h6 {
     padding:25px;
+}
+/* Mobile Responsive Layout */
+/* TODO: Tablet Responsive Layout */
+@media screen and (max-width:768px) {
+    
+    header {
+        height: 120px;
+        display: block;
+        background-color: black;
+        margin: 0 auto;
+    }
+    header h1 {
+        padding: 10px 10px 10px 10px;
+    }
+    nav{
+        display:flex;
+        justify-content: center;
+    }
+    .herotitle {
+        width: 50%;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        padding: 20px 0;
+        background-color: var(--darkcolor);
+    }
+    #aboutme, #work, #contactme {
+        display:flex;
+        flex-direction: column;
+    }
+    main{
+        margin: 25px 25px;
+    }
+    main section{
+        margin-bottom: 25px;
+        }
+    main h2{
+        text-align: center;
+        padding: 0 0 20px 0;
+        margin-right: 0;
+    }
+    main h2 br{
+        display: none
+    }
+    main p{
+        border-top: solid var(--darkcolor) 3px;
+        border-left: none;
+        width: 100%;
+        padding: 40px 0px 20px 0px;
+        min-width: 0;
+    }
+    .cardcontainer{
+
+        min-width: 0;
+        border-top: solid var(--darkcolor) 3px;
+        border-left: none;
+        padding: 40px 0px 20px 0px;
+    }
+    .cardtitle {  
+       
+        font-size: 50%;
+    }
+    .contactlinks {
+        display: flex;
+        border-top: solid var(--darkcolor) 3px;
+        border-left: none;
+        padding: 40px 20px 0px;
+    }
 }

@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title -->
     <title>Dat Nguyen Portfolio</title>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
     <header>
+        <!-- Name/Logo of the Portfolio -->
         <h1>Dat Nguyen</h1>
-
+        <!-- Navigation Bar -->
         <nav>
             <ul>
                 <a href="index.html#aboutme"> About me </a>
@@ -20,51 +22,56 @@
             </ul>
         </nav>
     </header>
-    
+    <!-- Hero Image -->
     <section class="hero">
         <img src="https://images.unsplash.com/photo-1636819488524-1f019c4e1c44?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="startup rocket illustration" >
         <h2 class="herotitle">To infinity and beyond!</h2>
     </section>
-
+    <!-- main content -->
     <main>
             <section id="aboutme">
-                <h2>&nbsp&nbspAbout <br> Me</h2>
-                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum voluptatem esse repellendus ut impedit sapiente sunt vero sit saepe fugit, illo harum perspiciatis quasi quidem, voluptatum aliquid dignissimos, libero quaerat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus alias exercitationem corporis eos aliquid quos, quae odio ducimus explicabo quam, expedita nobis? Quis magni ipsa reiciendis voluptate aspernatur sit incidunt. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quod dolore magnam dicta maxime dolorum, dolores velit optio, suscipit sed adipisci sit aperiam quaerat tempora! Reiciendis mollitia laborum consequatur explicabo!</p>
+                <!-- I used spaces to match the number of characters across the section titles to align the text, and therefore the separator line perfectly. Without the same number of characters, the text, and therefore separator would be pushed, despite text-align: right. The text may be aligned right, but the flexbox is aligned. This solution works better than fidning and fixing a specific width in pixels to the titles that fits all of the characters-->
+
+                <!-- 2 spaces, 7 characters on one line total -->
+                <h2>&nbsp&nbspAbout<br>Me</h2>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum voluptatem esse repellendus ut impedit sapiente sunt vero sit saepe fugit, illo harum perspiciatis quasi quidem, voluptatum aliquid dignissimos, libero quaerat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="index.html#work">WORK LINK</a> alias exercitationem corporis eos aliquid quos, quae odio ducimus explicabo quam, expedita nobis? Quis magni ipsa reiciendis voluptate aspernatur sit incidunt. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quod dolore magnam dicta maxime dolorum, dolores velit optio, suscipit sed adipisci sit aperiam quaerat tempora! Reiciendis mollitia laborum consequatur explicabo!</p>
             </section>
 
             <section id="work">
+                <!-- 3 spaces, 7 characters on one line total -->
                 <h2>&nbsp&nbsp&nbspWork</h2>
                 <section class="cardcontainer">
                     <section class="card">
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="surfer in the ocean" width="100%">
+                        <!-- All links lead to the same code refractoring project -->
+                        <a href="https://velkyam.github.io/horiseon-code-refractoring/#social-media-marketing" target="blank"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="surfer in the ocean" width="100%"></a>
                         <div class="cardtitle">
                             <h3>Surf Report</h3>
                             <div>MERN Stack</div>
                         </div>
                     </section>
                     <section class="card">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="surfer in the ocean" width="100%">
+                        <a href="https://velkyam.github.io/horiseon-code-refractoring/#social-media-marketing" target="blank"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="surfer in the ocean" width="100%"></a>
                         <div class="cardtitle">
                             <h3>LED Wall</h3>
                             <div>Node/IoT</div>
                         </div>
                     </section>
                     <section class="card">
-                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="surfer in the ocean" width="100%">
+                        <a href="https://velkyam.github.io/horiseon-code-refractoring/#social-media-marketing" target="blank"><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="surfer in the ocean" width="100%"></a>
                         <div class="cardtitle">
                             <h3>Calculator</h3>
                             <div>React/JavaScript/CSS</div>
                         </div>
                     </section>
                     <section class="card">
-                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="surfer in the ocean" width="100%">
+                        <a href="https://velkyam.github.io/horiseon-code-refractoring/#social-media-marketing" target="blank"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="surfer in the ocean" width="100%"></a>
                         <div class="cardtitle">
                             <h3>Pastel Puzzels</h3>
                             <div>MERN Stack</div>
                         </div>
                     </section>
                     <section class="card">
-                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="surfer in the ocean" width="100%">
+                        <a href="https://velkyam.github.io/horiseon-code-refractoring/#social-media-marketing" target="blank"><img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="surfer in the ocean" width="100%"></a>
                         <div class="cardtitle">
                             <h3>Run Buddy</h3>
                             <div>HTML/CSS</div>
@@ -75,12 +82,13 @@
             </section>
 
             <section id="contactme">
+                <!-- 7 characters on one line total -->
                 <h2>Contact <br> Me</h2>
                 <ul class="contactlinks">
-                    <li>LinkedIn</li>
-                    <li>Email</li>
-                    <li>Github</li>
-                    <li>Phone</li>
+                    <a href="https://www.linkedin.com/in/dat-tien-nguyen-42746a105" target="blank">LinkedIn</a>
+                    <a href="mailto:dat.nguyen97@outlook.com">Email</a>
+                    <a href="https://github.com/velkyam" target="blank">Github</a>
+                    <a href="tel:999999999">Phone</a>
                     <li>Instagram</li>
                 </ul>
             </section>
